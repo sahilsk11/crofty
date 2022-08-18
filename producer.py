@@ -40,7 +40,7 @@ driver_number_map = {
 def pub_events():
   events.sort(key=itemgetter(2))
   for e in events:
-    time.sleep(e[2]/10)
+    time.sleep(e[2]/50)
     pub({
       "car": driver_number_map[e[0]],
       "checkpoint": e[1],

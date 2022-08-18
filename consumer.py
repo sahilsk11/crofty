@@ -9,11 +9,6 @@ for message in consumer:
     data = json.loads(message.value)
     if "event" in data and data["event"] == "race_concluded":
         print(c.order())
-        print(c.interval(33, 16))
-        print(c.interval(33, 44))
-        print(c.interval(33, 55))
-        print(c.interval(33, 11))
-
         exit(1)
     i += 1
     c.update(
